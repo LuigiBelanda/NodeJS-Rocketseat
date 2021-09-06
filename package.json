@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LuigiBelanda/NodeJS-Rocketseat/issues"
   },
-  "homepage": "https://github.com/LuigiBelanda/NodeJS-Rocketseat#readme"
+  "homepage": "https://github.com/LuigiBelanda/NodeJS-Rocketseat#readme",
+  "dependencies": {
+    "cfonts": "^2.9.3"
+  }
 }
