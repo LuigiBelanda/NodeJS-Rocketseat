@@ -45,3 +45,5 @@ Exemplo de como ficam as dependências no package.json:
 - Com o comando `npm i nome_do_pacote@latest` pegamos a última versão do pacote que queremos
 
 - Com o comando `npm i nome_do_pacote@x.x.x` (x.x.x = versão que queremos) pegamos a versão que queremos do pacote
+
+- Com o comando `npm uninstall nome_do_pacote` desinstalamos qualquer pacote
