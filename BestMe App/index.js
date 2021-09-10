@@ -23,7 +23,28 @@ process.stdin.on("data", data => {
     if (answers.length < questions.length) {
         ask(answers.length);
     } else {
-        console.log(answers);
+        // console.log(answers);
         process.exit();
     }
+});
+
+// ouvindo o process.exit()
+process.on('exit', () => {
+    console.log(`
+        Bacana cara!
+
+        O que você aprendeu hoje foi:
+        ${answers[0]}
+
+        O que te aborreceu e você podeia melhorar foi:
+        ${answers[1]}
+
+        O que te deixou feliz hoje foi:
+        ${answers[2]}
+
+        Quantas pessoas você ajudou hoje:
+        ${answers[3]}
+
+        Volte amanhã para mais reflexões
+    `);
 });
