@@ -6,16 +6,24 @@ const questions = [
 ];
 
 const ask = (index = 0 ) => {
-    process.stdout.write(questions[index] + "\n\n\n")
+    process.stdout.write("\n\n" + questions[index] + " > ")
     // output: O que eu aprendi hoje?
 };
 
 ask();
 
+const answers = []
+
 // sempre que escrevermos algo no console e dermos enter ele vai pegar oq escrevemos
 // e trazer como output, o processo continua rodando alias.
 process.stdin.on("data", data => {
-    process.stdout.write(data.toString().trim() + '\n');
-    process.exit();
-    // colocamos o process.exit() para encerrar o processo, se não ele roda até darmos CTRL + C
+    answers.push(data.toString().trim());
+
+    // caso o número de respostas seja menor que o número de questões pegamos a proxíma pergunta até terminar nosso array
+    if (answers.length < questions.length) {
+        ask(answers.length);
+    } else {
+        console.log(answers);
+        process.exit();
+    }
 });
