@@ -11,3 +11,11 @@ const ask = (index = 0 ) => {
 };
 
 ask();
+
+// sempre que escrevermos algo no console e dermos enter ele vai pegar oq escrevemos
+// e trazer como output, o processo continua rodando alias.
+process.stdin.on("data", data => {
+    process.stdout.write(data.toString().trim() + '\n');
+    process.exit();
+    // colocamos o process.exit() para encerrar o processo, se não ele roda até darmos CTRL + C
+});
